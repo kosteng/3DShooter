@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
-  _batteryChargeMax: 0
+  _batteryChargeMax: 10
 --- !u!1 &700217849
 GameObject:
   m_ObjectHideFlags: 0
