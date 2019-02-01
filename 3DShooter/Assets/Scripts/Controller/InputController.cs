@@ -7,6 +7,9 @@ namespace ModelGame
         public override void OnUpdate()
         {
             if (Input.GetKeyDown(_codeFlashLight))
+            {
+                Main.Instance.FlashLightController.Switch();
+            }
         }
     }
 }

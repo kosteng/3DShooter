@@ -82,5 +82,22 @@ namespace ModelGame
             return false;
         }
 
+        /// <summary>
+        /// Метод восстановления батареи
+        /// </summary>
+        public void BatteryCharge()
+        {
+            if (BatteryChargeCurrent >= _batteryChargeMax)
+            {
+                return;
+            }
+            else
+            {
+                BatteryChargeCurrent += Time.deltaTime;
+
+            }
+
+        }
+
     }
 }

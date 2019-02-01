@@ -31,8 +31,12 @@ namespace ModelGame
         public override void OnUpdate()
         {
 
-            if (!IsActive) return;
-            if (_flashLight == null) return; 
+            if (!IsActive)
+            {
+                _flashLight.BatteryCharge();
+                return;
+            }
+                if (_flashLight == null) return; 
             _flashLight.Rotation();
             if( _flashLight.EditBatteryCharge())
             {
