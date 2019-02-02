@@ -13,13 +13,21 @@ namespace ModelGame
         /// </summary>
         private Text _text;
 
+        private Image _image;
+
         private void Start()
         {
-            _text = GetComponent<Text>();
+          //  _text = GetComponent<Text>();
+            _image = GetComponent<Image>();
         }
         /// <summary>
         /// Свойство форматирует и выводит информацию о заряде батареи
         /// </summary>
+        public void BatteryUI (float enegy)
+        {
+            if (_image == null) return;
+             _image.fillAmount = enegy;
+        }
         public float Text
         {
             set => _text.text = $"{value:0.0}";

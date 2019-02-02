@@ -36,13 +36,15 @@ namespace ModelGame
             if (!IsActive)
             {
                 _flashLight.BatteryCharge();
+                _flashLightUiText.BatteryUI(_flashLight.BatteryChargeCurrent);
                 return;
             }
                 if (_flashLight == null) return; 
             _flashLight.Rotation();
             if( _flashLight.EditBatteryCharge())
             {
-                _flashLightUiText.Text = _flashLight.BatteryChargeCurrent;
+               // _flashLightUiText.Text = _flashLight.BatteryChargeCurrent;
+                _flashLightUiText.BatteryUI(_flashLight.BatteryChargeCurrent);
             }
             else
             {
@@ -58,7 +60,7 @@ namespace ModelGame
             if (IsActive) return;
             base.On();
             _flashLight.Switch(true);
-            _flashLightUiText.SetActive(true);
+           // _flashLightUiText.SetActive(true);
         }
 
         /// <summary>
@@ -69,7 +71,7 @@ namespace ModelGame
             if (!IsActive) return;
             base.Off();
             _flashLight.Switch(false);
-            _flashLightUiText.SetActive(false);
+            //_flashLightUiText.SetActive(false);
         }
 
         

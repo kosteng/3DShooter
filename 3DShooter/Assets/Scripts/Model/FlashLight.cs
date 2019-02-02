@@ -76,7 +76,7 @@ namespace ModelGame
         {
             if (BatteryChargeCurrent > 0)
             {
-                BatteryChargeCurrent -= Time.deltaTime;
+                BatteryChargeCurrent -= Time.deltaTime / 13f;
                 return true;
             }
             return false;
@@ -93,7 +93,7 @@ namespace ModelGame
             }
             else
             {
-                BatteryChargeCurrent += Time.deltaTime;
+                BatteryChargeCurrent += Time.deltaTime / 17f;
 
             }
 
