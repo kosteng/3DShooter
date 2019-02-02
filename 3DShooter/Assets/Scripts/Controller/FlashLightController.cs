@@ -43,7 +43,7 @@ namespace ModelGame
             _flashLight.Rotation();
             if( _flashLight.EditBatteryCharge())
             {
-               // _flashLightUiText.Text = _flashLight.BatteryChargeCurrent;
+               
                 _flashLightUiText.BatteryUI(_flashLight.BatteryChargeCurrent);
             }
             else

@@ -11,13 +11,13 @@ namespace ModelGame
         /// <summary>
         /// Ссылка на текст UI
         /// </summary>
-        private Text _text;
+       
 
         private Image _image;
 
         private void Start()
         {
-          //  _text = GetComponent<Text>();
+          
             _image = GetComponent<Image>();
         }
         /// <summary>
@@ -28,15 +28,12 @@ namespace ModelGame
             if (_image == null) return;
              _image.fillAmount = enegy;
         }
-        public float Text
-        {
-            set => _text.text = $"{value:0.0}";
-        }
+       
 
 
         public void SetActive (bool value)    
         {
-            _text.gameObject.SetActive(value);
+            _image.gameObject.SetActive(value);
         }
     }
 }
