@@ -30,6 +30,7 @@ namespace ModelGame
         /// </summary>
         public override void OnUpdate()
         {
+            _flashLight?.FreezeRigid(RigidbodyConstraints.FreezePositionZ);
 
             if (!IsActive)
             {
@@ -69,5 +70,7 @@ namespace ModelGame
             _flashLight.Switch(false);
             _flashLightUiText.SetActive(false);
         }
+
+        
     }
 }

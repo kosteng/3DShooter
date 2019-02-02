@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace ModelGame
 { 
@@ -60,6 +59,22 @@ namespace ModelGame
             Rigidbody = GetComponent<Rigidbody>();
             Transform = transform;
             
+        }
+        /// <summary>
+        /// Заморозка оси физического свойства объекта
+        /// </summary>
+        /// <param name="constraints"> В качестве аргумента передаем нужную ось</param>
+        public void FreezeRigid(RigidbodyConstraints constraints)
+        {
+            if (Rigidbody == null) return;
+            if (constraints == RigidbodyConstraints.FreezePositionX)
+                Rigidbody.constraints = RigidbodyConstraints.FreezePositionX;
+            if (constraints == RigidbodyConstraints.FreezePositionY)
+                Rigidbody.constraints = RigidbodyConstraints.FreezePositionY;
+            if (constraints == RigidbodyConstraints.FreezePositionZ)
+                Rigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
+            if (constraints == RigidbodyConstraints.FreezeAll)
+                Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
         }
     }
 }
