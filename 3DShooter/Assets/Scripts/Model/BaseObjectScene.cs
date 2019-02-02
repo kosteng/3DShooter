@@ -64,7 +64,7 @@ namespace ModelGame
         /// Заморозка оси физического свойства объекта
         /// </summary>
         /// <param name="constraints"> В качестве аргумента передаем нужную ось</param>
-        /// почему-то когда этот метод делаю protected не могу вызвать у потомка
+        /// почему-то когда этот метод делаю protected не могу вызвать у потомка в данном случае у фонарика в скрипте FlashLightController
         public void FreezeRigid(RigidbodyConstraints constraints)
         {
             if (Rigidbody == null) return;
