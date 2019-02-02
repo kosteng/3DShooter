@@ -30,6 +30,7 @@ namespace ModelGame
         /// </summary>
         public override void OnUpdate()
         {
+            // проверка работы заморозки, не более пока оставлю ее
             _flashLight?.FreezeRigid(RigidbodyConstraints.FreezePositionZ);
 
             if (!IsActive)

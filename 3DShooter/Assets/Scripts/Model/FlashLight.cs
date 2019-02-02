@@ -36,7 +36,7 @@ namespace ModelGame
         /// Максимальный заряд батареи
         /// </summary>
         [SerializeField] private float _batteryChargeMax;
-
+        // зачем здесь protected, класс ведь запечатанный и потомков не будет? или я что-то путаю?
         protected override void Awake()
         {
             base.Awake();

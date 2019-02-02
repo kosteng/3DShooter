@@ -64,6 +64,7 @@ namespace ModelGame
         /// Заморозка оси физического свойства объекта
         /// </summary>
         /// <param name="constraints"> В качестве аргумента передаем нужную ось</param>
+        /// почему-то когда этот метод делаю protected не могу вызвать у потомка
         public void FreezeRigid(RigidbodyConstraints constraints)
         {
             if (Rigidbody == null) return;
