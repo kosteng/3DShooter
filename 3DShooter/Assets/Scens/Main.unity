@@ -277,8 +277,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e87ce2dd510b5a14cb79fb5cdf88145b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Rigidbody: {fileID: 0}
   _speed: 10
-  _batteryChargeMax: 1
+  _batteryChargeMax: 5
+  _intensity: 1.5
+  _nonMagicalSpeedUpBattery: 13
+  _nonMagicalSpeedDownBattery: 17
 --- !u!54 &534263848
 Rigidbody:
   m_ObjectHideFlags: 0
