@@ -6,6 +6,18 @@
     public abstract class BaseController
     {
         /// <summary>
+        /// Интерфейс игры
+        /// </summary>
+        protected UiInterface UiInterface;
+        
+        /// <summary>
+        /// Инициализация в конструкторе
+        /// </summary>
+        protected BaseController()
+        {
+            UiInterface = new UiInterface();
+        }
+        /// <summary>
         /// Свойство проверяет активный или нет объект
         /// </summary>
         public bool IsActive { get; private set; }
