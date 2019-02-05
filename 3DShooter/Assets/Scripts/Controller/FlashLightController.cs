@@ -12,6 +12,9 @@ namespace ModelGame
         /// </summary>
         private FlashLight _flashLight;
 
+        /// <summary>
+        /// Ссылка на UI текст фонарика
+        /// </summary>
         private FlashLightUiText _flashLightUiText;
        
         /// <summary>
