@@ -35,7 +35,10 @@ namespace ModelGame
                 Main.Instance.WeaponController.ReloadClip();
             }
         }
-
+        /// <summary>
+        /// Выбор оружия
+        /// </summary>
+        /// <param name="i"> Индекс оружия в массиве</param>
         private void SelectWeapon(int i)
         {
             Main.Instance.WeaponController.Off();
