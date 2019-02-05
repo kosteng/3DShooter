@@ -33,8 +33,7 @@ namespace ModelGame
         /// </summary>
         public override void OnUpdate()
         {
-            // проверка работы заморозки, не более пока оставлю ее
-            _flashLight?.FreezeRigid(RigidbodyConstraints.FreezePositionZ);
+            
 
             if (!IsActive)
             {
@@ -42,7 +41,7 @@ namespace ModelGame
                 _flashLightUiText.BatteryUI(_flashLight.BatteryChargeCurrent);
                 return;
             }
-                if (_flashLight == null) return; 
+            if (_flashLight == null) return; 
             _flashLight.Rotation();
             if( _flashLight.EditBatteryCharge())
             {
@@ -63,7 +62,8 @@ namespace ModelGame
             if (IsActive) return;
             base.On();
             _flashLight.Switch(true);
-           // _flashLightUiText.SetActive(true);
+            _flashLight = Main.Instance.ObjectManager.FlashLight;
+            UiInterface.LightUiText.SetActive(true);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace ModelGame
             if (!IsActive) return;
             base.Off();
             _flashLight.Switch(false);
-            //_flashLightUiText.SetActive(false);
+           
         }
 
         

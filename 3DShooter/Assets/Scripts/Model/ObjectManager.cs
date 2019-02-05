@@ -1,18 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class ObjectManager : MonoBehaviour
+﻿using UnityEngine;
+namespace ModelGame
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ObjectManager
     {
-        
-    }
+        private Weapon[] _weapons = new Weapon[5];
+        public Weapon[] Weapons => _weapons;
+        public FlashLight FlashLight { get; private set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void Start()
+        {
+            _weapons = Main.Instance.Player.GetComponentsInChildren<Weapon>();
+            foreach (var weapon in Weapons)
+            {
+                weapon.IsVisible = false;
+            }
+
+            FlashLight = MonoBehaviour.FindObjectOfType<FlashLight>();
+            FlashLight.Switch(false);
+        }
     }
 }
