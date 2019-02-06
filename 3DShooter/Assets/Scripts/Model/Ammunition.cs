@@ -15,12 +15,12 @@ namespace ModelGame
         /// Начальный урон
         /// </summary>
         [SerializeField] protected float _baseDamage = 10;
-        
+
         /// <summary>
         /// Тип снарядов
         /// </summary>
         public AmmunitionType Type { get; } = AmmunitionType.AmmoGun;
-        
+
         /// <summary>
         /// Текущий урон снаряда
         /// </summary>

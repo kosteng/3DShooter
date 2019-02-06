@@ -10,11 +10,11 @@ namespace ModelGame
         /// <summary>
         ///  Максимальное количество патронов в обойме
         /// </summary>
-        protected int _maxCountAmmunition = 20;
+        [SerializeField] protected int _maxCountAmmunition = 20;
         /// <summary>
         /// Количество обойм для патронов
         /// </summary>
-        protected int _countClip = 5;
+        [SerializeField] protected int _countClip = 5;
         
         /// <summary>
         /// Доступ к патронам 
@@ -29,7 +29,7 @@ namespace ModelGame
         /// <summary>
         /// Массив доступных видов патронов/снарядов
         /// </summary>
-        protected AmmunitionType[] ammunitionTypes = new AmmunitionType[] { AmmunitionType.AmmoGun };
+        [SerializeField] protected AmmunitionType[] ammunitionTypes = new AmmunitionType[] { AmmunitionType.AmmoGun, AmmunitionType.AmmoAk };
 
         /// <summary>
         ///  Место от куда летят снаряды из оружия

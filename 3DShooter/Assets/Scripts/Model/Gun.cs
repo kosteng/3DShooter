@@ -2,6 +2,7 @@
 {
     public sealed class Gun : Weapon
     {
+      
         public override void Fire()
         {
             if (!_isReady) return;

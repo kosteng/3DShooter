@@ -24,6 +24,7 @@ namespace ModelGame
         if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 SelectWeapon(0);
+                Debug.Log(1);
             }
         if (Input.GetKeyDown(_cancel))
             {
