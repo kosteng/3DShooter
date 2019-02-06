@@ -23,8 +23,10 @@ namespace ModelGame
             //колесо мыши
         if (Input.GetKeyDown(KeyCode.Alpha1))
             {
+    //            var tempWeapon = Main.Instance.ObjectManager.Weapons[0];
+      //          Main.Instance.WeaponController.On(tempWeapon);
                 SelectWeapon(0);
-                Debug.Log(1);
+                Debug.Log(Main.Instance.ObjectManager.Weapons[0]);
             }
         if (Input.GetKeyDown(_cancel))
             {
@@ -44,7 +46,8 @@ namespace ModelGame
         {
             Main.Instance.WeaponController.Off();
             var tempWeapon = Main.Instance.ObjectManager.Weapons[i];
-            if (tempWeapon != null) Main.Instance.WeaponController.On(tempWeapon); 
+            if (tempWeapon != null)
+                Main.Instance.WeaponController.On(tempWeapon); 
         }
     }
 }

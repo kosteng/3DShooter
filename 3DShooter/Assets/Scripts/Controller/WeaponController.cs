@@ -31,7 +31,7 @@ namespace ModelGame
         /// <param name="weapon"></param>
         public override void On(BaseObjectScene weapon)
         {
-            if (!IsActive) return;
+            if (IsActive) return;
             base.On(weapon);
 
             _weapon = weapon as Weapon;
