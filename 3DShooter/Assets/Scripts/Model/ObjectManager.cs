@@ -5,6 +5,8 @@ namespace ModelGame
     {
         private Weapon[] _weapons = new Weapon[5];
         public Weapon[] Weapons => _weapons;
+        private Ammunition[] _ammunitions = new Ammunition[5];
+        public Ammunition[] Ammunitions => _ammunitions;
         public FlashLight FlashLight { get; private set; }
 
         public void Start()

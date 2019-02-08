@@ -221,11 +221,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Rigidbody: {fileID: 0}
-  _maxCountAmmunition: 20
-  _countClip: 5
+  _maxCountAmmunition: 30
+  _countClip: 4
   Ammunition: {fileID: 1071143646408529131, guid: 3253eaa1697de9241977346c09bc2bf6,
     type: 3}
-  _barrel: {fileID: 0}
+  _barrel: {fileID: 1294782432}
   _force: 999
   _rechargeTime: 0.2
 --- !u!1 &534263844
@@ -864,6 +864,36 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4848776309479771375, guid: 9bd1c323c82ffcd44971d8175822ccd3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9bd1c323c82ffcd44971d8175822ccd3, type: 3}
+--- !u!1 &1294782431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1294782432}
+  m_Layer: 0
+  m_Name: Barrel
+  m_TagString: Untagged
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1294782432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294782431}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0.1, z: -1.006}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 458035936}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &1507349958 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4848776309249951498, guid: 9bd1c323c82ffcd44971d8175822ccd3,

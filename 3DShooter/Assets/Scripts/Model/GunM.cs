@@ -1,12 +1,7 @@
 ﻿namespace ModelGame
 {
-    public sealed class Gun : Weapon
+    public sealed class GunM : Weapon
     {
-
-        private void Start()
-        {
-            
-        }
         public override void Fire()
         {
             if (!_isReady) return;

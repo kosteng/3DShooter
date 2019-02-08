@@ -23,10 +23,11 @@ namespace ModelGame
             //колесо мыши
         if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-    //            var tempWeapon = Main.Instance.ObjectManager.Weapons[0];
-      //          Main.Instance.WeaponController.On(tempWeapon);
                 SelectWeapon(0);
-                Debug.Log(Main.Instance.ObjectManager.Weapons[0]);
+            }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                SelectWeapon(1);
             }
         if (Input.GetKeyDown(_cancel))
             {
