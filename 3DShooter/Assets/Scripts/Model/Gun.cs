@@ -3,10 +3,6 @@
     public sealed class Gun : Weapon
     {
 
-        private void Start()
-        {
-            
-        }
         public override void Fire()
         {
             if (!_isReady) return;
