@@ -19,7 +19,8 @@ namespace ModelGame
         /// <summary>
         /// Тип снарядов
         /// </summary>
-        public AmmunitionType Type { get; } = AmmunitionType.AmmoGun;
+        [SerializeField]
+      protected AmmunitionType Type { get; } = AmmunitionType.AmmoGun;
 
         /// <summary>
         /// Текущий урон снаряда

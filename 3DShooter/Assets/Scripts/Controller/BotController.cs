@@ -1,12 +1,20 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-namespace ModelGame
-{
 
+namespace ModelGame
+{   /// <summary>
+    /// Констроллер ботов
+    /// </summary>
     public class BotController : BaseController
-    {
+    {   /// <summary>
+        /// Массив ботов
+        /// </summary>
         public List<Bot> GetBotList { get; } = new List<Bot>();
-        public void Init (int countBot)
+        /// <summary>
+        /// Создание бота
+        /// </summary>
+        /// <param name="countBot">Количество ботов</param>
+        public void Init(int countBot)
         {
             for (var index = 0; index < countBot; index++)
             {
@@ -15,11 +23,25 @@ namespace ModelGame
                     Quaternion.identity);
 
                 tempBot.Agent.avoidancePriority = index;
-                tempBot.Target = Main.Instance.Player; // дз разных противников в цель
-                AddBotToList(tempBot);
+                tempBot.Target = Main.Instance.Player; // разных противников
+                if (GetBotList.Count == 0)
+                {
+
+                    tempBot.Target = Main.Instance.Player;
+                    AddBotToList(tempBot);
+                }
+                else
+                {
+                    tempBot.Target = GetBotList[Random.Range(0,GetBotList.Count)].transform;
+                    AddBotToList(tempBot);
+                }
             }
         }
 
+        /// <summary>
+        /// Метод добавляет ботов в массив
+        /// </summary>
+        /// <param name="bot">Бот</param>
         private void AddBotToList(Bot bot)
         {
             if (!GetBotList.Contains(bot))
@@ -28,6 +50,10 @@ namespace ModelGame
             }
         }
 
+        /// <summary>
+        /// Матод удаляет из массива ботов
+        /// </summary>
+        /// <param name="bot">Бот</param>
         public void RemoveBotToList(Bot bot)
         {
             if (GetBotList.Contains(bot))
@@ -38,12 +64,10 @@ namespace ModelGame
 
         public override void OnUpdate()
         {
-            if (!IsActive)
+            if (!IsActive) return;
+            foreach (var bot in GetBotList)
             {
-                foreach( var bot in GetBotList)
-                {
-                    bot.Tick();
-                }
+                bot.Tick();
             }
         }
     }

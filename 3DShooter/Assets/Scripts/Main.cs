@@ -28,8 +28,7 @@ namespace ModelGame
             ObjectManager = new ObjectManager();
             ObjectManager.Start();
 
-            PlayerController = new PlayerController(new UnitMotor(
-                GameObject.FindObjectOfType<CharacterController>().transform));
+            PlayerController = new PlayerController(new UnitMotor(Player));
             PlayerController.On();
             FlashLightController = new FlashLightController();
             InputController = new InputController();
