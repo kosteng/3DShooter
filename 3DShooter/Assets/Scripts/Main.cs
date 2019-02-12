@@ -40,7 +40,7 @@ namespace ModelGame
             BotController = new BotController();
             BotController.On();
             BotController.Init(CountBot);
-            Controllers = new BaseController[4];
+            Controllers = new BaseController[6];
             Controllers[0] = FlashLightController;
             Controllers[1] = InputController;
             Controllers[2] = PlayerController;

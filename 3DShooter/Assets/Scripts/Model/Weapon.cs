@@ -29,7 +29,6 @@ namespace ModelGame
             }
 
             ReloadClip();
-            Debug.Log(Clip.CountAmmunition);
         }
 
         public abstract void Fire();

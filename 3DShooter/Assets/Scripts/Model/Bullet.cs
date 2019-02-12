@@ -7,7 +7,7 @@
         {
             var tempObj = collision.gameObject.GetComponent<ISetDamage>();
             // доп урон
-            tempObj?.ApplyDamage(new InfoCollision(_curDamage, Rigidbody.velocity));
+            tempObj?.ApplyDamage(new InfoCollision(_curDamage, collision.contacts[0], collision.transform, Rigidbody.velocity));
             Destroy(gameObject);
         }
     }
