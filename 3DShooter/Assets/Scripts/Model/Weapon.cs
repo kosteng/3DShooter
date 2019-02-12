@@ -11,7 +11,7 @@ namespace ModelGame
         public Ammunition Ammunition;
         public Clip Clip;
 
-        protected AmmunitionType[] _ammunitionType;// = new AmmunitionType[] { AmmunitionType.AmmoGun, AmmunitionType.AmmoAk };
+        protected AmmunitionType[] _ammunitionType = new AmmunitionType[] { AmmunitionType.AmmoGun, AmmunitionType.AmmoAk };
 
         [SerializeField] protected Transform _barrel;
         [SerializeField] protected float _force = 999;

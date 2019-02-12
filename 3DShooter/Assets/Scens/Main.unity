@@ -913,9 +913,29 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1507349958}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb4be2f27fb85784ba0b41e9f978efb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rigidbody: {fileID: 0}
+  _maxCountAmmunition: 20
+  _countClip: 5
+  Ammunition: {fileID: 1071143646408529131, guid: 3253eaa1697de9241977346c09bc2bf6,
+    type: 3}
+  _barrel: {fileID: 1777103479}
+  _force: 999
+  _rechargeTime: 0.2
+--- !u!114 &1507349961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1507349958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f774afb8c1ce3d42adaf2704b80fd05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Rigidbody: {fileID: 0}

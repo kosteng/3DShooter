@@ -3,6 +3,7 @@
     public enum AmmunitionType
     {
         AmmoGun,
-        AmmoAk
+        AmmoAk,
+        amm
     }
 }
