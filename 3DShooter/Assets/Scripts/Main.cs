@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace ModelGame
 {
@@ -9,6 +10,7 @@ namespace ModelGame
         public PlayerController PlayerController { get; private set; }
         public WeaponController WeaponController { get; private set; }
         public SelectionController SelectionController { get; private set; }
+        public SaveDataRepository SaveDataRepository { get; private set; }
         public BotController BotController { get; private set; }
         public ObjectManager ObjectManager { get; private set; }
         public Transform Player { get; private set; }
@@ -27,7 +29,7 @@ namespace ModelGame
 
             ObjectManager = new ObjectManager();
             ObjectManager.Start();
-
+            SaveDataRepository = new SaveDataRepository();
             PlayerController = new PlayerController(new UnitMotor(Player));
             PlayerController.On();
             FlashLightController = new FlashLightController();
@@ -35,8 +37,9 @@ namespace ModelGame
             InputController.On();
             SelectionController = new SelectionController();
             WeaponController = new WeaponController();
-
             BotController = new BotController();
+
+
             BotController.On();
             BotController.Init(CountBot);
             Controllers = new BaseController[6];
@@ -61,6 +64,16 @@ namespace ModelGame
         private void OnGUI()
         {
             GUI.Label(new Rect(0, 0, 100, 100), $"{1 / Time.deltaTime:0.0}");
+        }
+
+        public void DoStartCoroutine(IEnumerator routine)
+        {
+            StartCoroutine(routine);
+        }
+
+        public void DoStopCoroutine(IEnumerator routine)
+        {
+            StopCoroutine(routine);
         }
     }
 

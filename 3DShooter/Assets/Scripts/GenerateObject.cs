@@ -42,7 +42,7 @@ namespace ModelGame
             _maxZ = _levelSize.transform.localScale.z;
 
 
-            GetGenerateObject();
+           
 
 
         }

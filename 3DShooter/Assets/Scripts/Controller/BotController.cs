@@ -16,9 +16,11 @@ namespace ModelGame
         /// <param name="countBot">Количество ботов</param>
         public void Init(int countBot)
         {
+            var bot = Resources.Load<Bot>("Bot");
             for (var index = 0; index < countBot; index++)
             {
-                var tempBot = Bot.Instantiate(Main.Instance.RefBotPrefab,
+                
+                var tempBot = Bot.Instantiate(bot,
                     Patrol.GenericPoint(Main.Instance.Player),
                     Quaternion.identity);
 

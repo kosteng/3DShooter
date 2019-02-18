@@ -7,6 +7,8 @@ namespace ModelGame
         private KeyCode _codeFlashLight = KeyCode.F;
         private KeyCode _cancel = KeyCode.Escape;
         private KeyCode _reloadClip = KeyCode.R;
+        private KeyCode _savePlayer = KeyCode.F5;
+        private KeyCode _loadPlayer = KeyCode.F9;
 
         public InputController ()
         {
@@ -21,11 +23,20 @@ namespace ModelGame
                 Main.Instance.FlashLightController.Switch();
             }
             //колесо мыши
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 SelectWeapon(0);
             }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+            if (Input.GetKeyDown(_savePlayer))
+            {
+                Main.Instance.SaveDataRepository.Save();
+            }
+
+            if (Input.GetKeyDown(_loadPlayer))
+            {
+                Main.Instance.SaveDataRepository.Load();
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 SelectWeapon(1);
             }
