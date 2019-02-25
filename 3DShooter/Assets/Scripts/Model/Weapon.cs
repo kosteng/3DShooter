@@ -23,6 +23,7 @@ namespace ModelGame
 
         private void Start()
         {
+            Ammunition = Resources.Load<Bullet>("Bullet 1");
             for (var i = 0; i <= _countClip; i++)
             {
                 AddClip(new Clip { CountAmmunition = _maxCountAmmunition });

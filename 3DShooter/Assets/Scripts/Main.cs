@@ -17,7 +17,7 @@ namespace ModelGame
         public Transform MainCamera { get; private set; }
         private BaseController[] Controllers;
 
-        public Bot RefBotPrefab;
+
         public int CountBot;
         public static Main Instance { get; private set; }
 

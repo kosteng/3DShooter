@@ -41,8 +41,8 @@ namespace ModelGame
             _maxX = _levelSize.transform.localScale.x;
             _maxZ = _levelSize.transform.localScale.z;
 
-
-           
+            _mineObject = Resources.Load<GameObject>("Mine");
+            _medicObject = Resources.Load<GameObject>("Medic");
 
 
         }
