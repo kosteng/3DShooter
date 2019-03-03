@@ -5,7 +5,7 @@ namespace ModelGame {
     /// <summary>
     /// Класс поведения бота
     /// </summary>
-    public sealed class Bot : BaseObjectScene, ISetDamage
+    public sealed class Bot : BaseObjectScene, ISetDamage, ISetHealth
     {
         /// <summary>
         /// Количество жизней
@@ -137,6 +137,16 @@ namespace ModelGame {
         public void MovePoint(Vector3 point)
         {
             Agent.SetDestination(point);
+        }
+
+        public void ApplyHealth(float health)
+        {
+            Debug.Log(2);
+            Hp += health;
+            if (Hp > 100)
+                Hp = 100;
+            Debug.Log(Hp);
+
         }
     }
 }

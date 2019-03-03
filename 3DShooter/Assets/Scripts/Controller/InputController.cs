@@ -40,7 +40,11 @@ namespace ModelGame
             {
                 SelectWeapon(1);
             }
-        if (Input.GetKeyDown(_cancel))
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                SelectWeapon(2);
+            }
+            if (Input.GetKeyDown(_cancel))
             {
                 Main.Instance.WeaponController.Off();
                 Main.Instance.FlashLightController.Off();

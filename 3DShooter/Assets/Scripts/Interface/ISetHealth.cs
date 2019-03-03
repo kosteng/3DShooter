@@ -3,13 +3,13 @@
     /// <summary>
     /// Интерфейс получения урона
     /// </summary>
-    public interface ISetDamage 
+    public interface ISetHealth
     {
         /// <summary>
         /// Метод получения урона
         /// </summary>
         /// <param name="info">Информация о объекте который получит урон</param>
-        void ApplyDamage(InfoCollision info);
+        void ApplyHealth(float health);
 
     }
 }
