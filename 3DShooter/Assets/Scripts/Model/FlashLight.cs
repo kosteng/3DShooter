@@ -75,7 +75,7 @@ namespace ModelGame
         /// <param name="value"></param>
         public void Switch(bool value)
         {
-            _light.enabled = value;
+        //    _light.enabled = value;
             if (!value) return;
             transform.position = _goFollow.position + _vecOffset;
             transform.rotation = _goFollow.rotation;
