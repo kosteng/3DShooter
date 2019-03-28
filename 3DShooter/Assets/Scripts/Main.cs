@@ -13,8 +13,8 @@ namespace ModelGame
         public SaveDataRepository SaveDataRepository { get; private set; }
         public BotController BotController { get; private set; }
         public ObjectManager ObjectManager { get; private set; }
-        public Transform Player { get; private set; }
-        public Transform MainCamera { get; private set; }
+        public Transform Player { get; set; }
+        public Transform MainCamera { get; set; }
         private BaseController[] Controllers;
 
 
@@ -71,10 +71,7 @@ namespace ModelGame
             StartCoroutine(routine);
         }
 
-        public void DoStopCoroutine(IEnumerator routine)
-        {
-            StopCoroutine(routine);
-        }
+      
     }
 
 }

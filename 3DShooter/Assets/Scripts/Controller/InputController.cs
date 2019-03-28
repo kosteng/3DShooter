@@ -18,6 +18,11 @@ namespace ModelGame
         
         public override void OnUpdate()
         {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+                Time.timeScale = 0;
+            }
             if (Input.GetKeyDown(_codeFlashLight))
             {
                 Main.Instance.FlashLightController.Switch();

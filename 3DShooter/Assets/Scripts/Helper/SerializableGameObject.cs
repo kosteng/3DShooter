@@ -6,6 +6,7 @@ namespace ModelGame
 	[Serializable]
 	public struct SerializableGameObject
 	{
+
 		public string Name;
 		public bool IsEnable;
 		public SerializableVector3 Pos;
