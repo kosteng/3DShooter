@@ -14,7 +14,8 @@ namespace ModelGame
 		public SerializableVector3 Scale;
 		public Vector3 Test;
 
-		public override string ToString()
+
+        public override string ToString()
 		{
 			return $"Name = {Name}; IsEnable = {IsEnable}; Pos = {Pos};";
 		}

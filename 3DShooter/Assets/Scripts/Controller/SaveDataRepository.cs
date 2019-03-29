@@ -25,12 +25,15 @@ namespace ModelGame
 			{
 				Directory.CreateDirectory(_path);
 			}
-			var player = new SerializableGameObject
-			{
-				Pos = Main.Instance.Player.position,
-				Name = "Kos",
-				IsEnable = true
-                
+            var player = new SerializableGameObject
+            {
+
+                Pos = Main.Instance.Player.position,
+                Name = "Kos",
+                IsEnable = true,
+                Rot = Main.Instance.Player.rotation
+
+
             };
 
 			_data.Save(player, Path.Combine(_path, _fileName));
@@ -41,12 +44,13 @@ namespace ModelGame
 			var file = Path.Combine(_path, _fileName);
 			if (!File.Exists(file)) return;
 			var player = _data.Load(file);
-
+            
 			Main.Instance.Player.position = player.Pos;
             Main.Instance.Player.name = player.Name;
 			Main.Instance.Player.gameObject.SetActive(player.IsEnable);
+            Main.Instance.Player.rotation = player.Rot;
 
-			Debug.Log(Main.Instance.Player);
+            Debug.Log(Main.Instance.Player);
 		}
 	}
 }
