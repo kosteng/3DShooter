@@ -23,6 +23,10 @@ namespace ModelGame
                 _weapon.Fire();
                 UiInterface.WeaponUiText.ShowData(_weapon.Clip.CountAmmunition, _weapon.CountClip);
             }
+            else if (Input.GetKeyDown(KeyCode.F9))
+            {
+                UiInterface.WeaponUiText.ShowData(_weapon.Clip.CountAmmunition, _weapon.CountClip);
+            }
         }
 
         /// <summary>

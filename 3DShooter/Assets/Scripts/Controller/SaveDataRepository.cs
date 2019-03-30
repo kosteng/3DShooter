@@ -27,14 +27,17 @@ namespace ModelGame
 			}
             var player = new SerializableGameObject
             {
-
                 Pos = Main.Instance.Player.position,
                 Name = "Kos",
                 IsEnable = true,
-                Rot = Main.Instance.Player.rotation
-
-
+                Rot = Main.Instance.Player.rotation,
             };
+
+            Weapon[] weapons = Main.Instance.Player.GetComponentsInChildren<Weapon>();
+            foreach (var w in weapons)
+            {
+                player.Weapon.Add(w); 
+            }
 
 			_data.Save(player, Path.Combine(_path, _fileName));
 		}
@@ -45,12 +48,21 @@ namespace ModelGame
 			if (!File.Exists(file)) return;
 			var player = _data.Load(file);
             
-			Main.Instance.Player.position = player.Pos;
+			Main.Instance.Player.position = (Vector3)player.Pos;
             Main.Instance.Player.name = player.Name;
 			Main.Instance.Player.gameObject.SetActive(player.IsEnable);
             Main.Instance.Player.rotation = player.Rot;
 
-            Debug.Log(Main.Instance.Player);
+            Gun[] guns = Main.Instance.Player.GetComponentsInChildren<Gun>();
+            for (int i = 0; i < guns.Length; i++ )
+            {
+                guns[i].Clip.CountAmmunition = player.Weapon[i].CountAmmunition;
+                //guns[i]._clips. = player.Weapon[i].CountClip;
+            }
+             
+            Main.Instance.WeaponController.OnUpdate();
+
+            //Debug.Log(q[0]);
 		}
 	}
 }

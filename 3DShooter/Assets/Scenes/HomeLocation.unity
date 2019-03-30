@@ -5329,6 +5329,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 4287845668575787381, guid: 2205ae885fe3950408ce34cec741ab82,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4287845668575787382, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5437,82 +5442,82 @@ PrefabInstance:
     - target: {fileID: 4287845668138304185, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4287845668138304185, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4287845668138304185, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4287845668138304185, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -33.5
       objectReference: {fileID: 0}
     - target: {fileID: 4287845668235667531, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4287845668235667531, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4287845668235667531, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4287845668235667531, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -100.5
       objectReference: {fileID: 0}
     - target: {fileID: 4287845667090105730, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4287845667090105730, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4287845667090105730, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4287845667090105730, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -167.5
       objectReference: {fileID: 0}
     - target: {fileID: 4287845667678513819, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4287845667678513819, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4287845667678513819, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 4287845667678513819, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -234.5
       objectReference: {fileID: 0}
     - target: {fileID: 4287845667678513818, guid: 2205ae885fe3950408ce34cec741ab82,
         type: 3}
@@ -7384,7 +7389,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 
 --- !u!222 &1768343212
 CanvasRenderer:
   m_ObjectHideFlags: 0

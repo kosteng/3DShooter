@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace ModelGame
 {
+    [System.Serializable]
     public abstract class Weapon : BaseObjectScene
     {
 

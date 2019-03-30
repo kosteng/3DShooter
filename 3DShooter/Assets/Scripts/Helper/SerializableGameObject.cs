@@ -1,25 +1,45 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace ModelGame
 {
 	[Serializable]
-	public struct SerializableGameObject
+	public class SerializableGameObject
 	{
-
 		public string Name;
 		public bool IsEnable;
 		public SerializableVector3 Pos;
 		[SerializeField] public SerializableQuaternion Rot;
 		public SerializableVector3 Scale;
 		public Vector3 Test;
-
+        public List<SeriazableWeaponInfo> Weapon = new List<SeriazableWeaponInfo>();
 
         public override string ToString()
 		{
 			return $"Name = {Name}; IsEnable = {IsEnable}; Pos = {Pos};";
 		}
 	}
+
+    [Serializable]
+    public class SeriazableWeaponInfo
+    {
+        public int CountClip;
+        public int CountAmmunition;
+
+        public SeriazableWeaponInfo(int CountClip, int CountAmmunition)
+        {
+                this.CountClip = CountClip;
+                this.CountAmmunition = CountAmmunition;
+        }
+
+        public static implicit operator SeriazableWeaponInfo(Weapon value)
+        {
+            
+            return new SeriazableWeaponInfo(value.CountClip, value.Clip.CountAmmunition);
+        }
+    }
+
 	[Serializable]
 	public struct SerializableVector3
 	{
