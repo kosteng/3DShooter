@@ -12,7 +12,7 @@ namespace ModelGame
 
         public InputController ()
         {
-            Cursor.lockState = CursorLockMode.Locked;
+         //   Cursor.lockState = CursorLockMode.Locked;
         }
 
         
@@ -20,8 +20,8 @@ namespace ModelGame
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Cursor.lockState = CursorLockMode.Confined;
-                Time.timeScale = 0;
+              //  Cursor.lockState = CursorLockMode.None;
+                
             }
             if (Input.GetKeyDown(_codeFlashLight))
             {
@@ -45,10 +45,7 @@ namespace ModelGame
             {
                 SelectWeapon(1);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                SelectWeapon(2);
-            }
+           
             if (Input.GetKeyDown(_cancel))
             {
                 Main.Instance.WeaponController.Off();

@@ -16,13 +16,13 @@ namespace ModelGame
         public Transform Player { get; set; }
         public Transform MainCamera { get; set; }
         private BaseController[] Controllers;
-
-
+        public bool IsLoadedScene = true;
         public int CountBot;
         public static Main Instance { get; private set; }
 
         private void Awake()
         {
+            
             Instance = this;
             MainCamera = Camera.main.transform;
             Player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -49,6 +49,7 @@ namespace ModelGame
             Controllers[3] = WeaponController;
             Controllers[4] = SelectionController;
             Controllers[5] = BotController;
+
         }
 
         private void Update()
@@ -57,6 +58,11 @@ namespace ModelGame
             {
                 var controller = Controllers[index];
                 controller.OnUpdate();
+            }
+            if (IsLoadedScene)
+            {
+                Instance.SaveDataRepository.Load();
+                IsLoadedScene = false;
             }
         }
 
